@@ -9,9 +9,18 @@ brain  Brain;
 
 // VEXcode device constructors
 controller Controller1 = controller(primary);
-encoder EncoderY1 = encoder(Brain.ThreeWirePort.A);
-encoder EncoderX2 = encoder(Brain.ThreeWirePort.C);
-encoder EncoderX1 = encoder(Brain.ThreeWirePort.G);
+motor CenterWheel = motor(PORT2, ratio18_1, false); // Conveyer belt 
+motor LeftFront = motor(PORT4, ratio18_1, false); // FrontLeft
+motor LeftBack = motor(PORT6, ratio18_1, false); // BackLeft
+motor RightFront = motor(PORT8, ratio18_1, false);
+motor RightBack = motor(PORT10, ratio18_1, false);
+motor FlyWheel = motor(PORT9, ratio18_1, false);
+motor IntakeMotor = motor(PORT5, ratio6_1, false);
+encoder EncoderX1 = encoder(PORT5);
+encoder EncoderX2 = encoder(PORT7);
+encoder Encoder1Y = encoder(PORT11);
+pneumatics WheelPusher = pneumatic(PORT12);
+
 
 // VEXcode generated functions
 // define variable for remote controller enable/disable
